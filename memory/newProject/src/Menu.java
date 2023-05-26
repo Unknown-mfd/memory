@@ -45,11 +45,11 @@ public class Menu {
 
     }
 
-    public JMenu userMenu = new JMenu("User");
+    public JMenuBar menuBar = new JMenuBar();
 
     public void addMenuBar(){
 
-        JMenuBar menuBar = new JMenuBar();
+        
         frame.setJMenuBar(menuBar);
 
         //--------------------//
@@ -89,7 +89,7 @@ public class Menu {
 
         //--------------------//
 
-        
+        JMenu userMenu = new JMenu("User");
         userMenu.addActionListener(e -> new User());
         menuBar.add(userMenu);
 

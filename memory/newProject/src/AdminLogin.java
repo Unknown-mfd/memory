@@ -8,13 +8,12 @@ public class AdminLogin extends Menu {
     public AdminLogin() {
         String input = JOptionPane.showInputDialog("Enter password");
         if (input.equals(password)) {
+           JMenu adminMenu = new JMenu("Admin");
+            menuBar.add(adminMenu);
+
             JMenuItem adminOptionsItem = new JMenuItem("Admin Options");
             adminOptionsItem.addActionListener(e -> new AdminOptions());
-            userMenu.add(adminOptionsItem);
-
-            JMenuItem adminViewItem = new JMenuItem("Admin View");
-            adminViewItem.addActionListener(e -> new AdminOptions());
-            userMenu.add(adminViewItem);
+            adminMenu.add(adminOptionsItem);
 
 
         } else {
@@ -24,3 +23,4 @@ public class AdminLogin extends Menu {
     }
 
 }
+
